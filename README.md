@@ -4,11 +4,13 @@ SBSwiftyTimeOut detects when an app goes idle/inactive (no touches) and sends a 
 For Objective C click [here][sbtimeout-url]
 
 <img src="https://raw.githubusercontent.com/sankarlal/sbSwiftyTimeOut/master/Screen%20Shots/LogoutScreen.png" alt="SBSwiftyTimeOut Screenshot" />
+
 ## Configuration
 
-Comment Or Delete the `@UIApplicationMain` in AppDelegate then add main.swift file.
+Comment Or Delete the `@UIApplicationMain` in AppDelegate then add `main.swift` file.
 
 Adding main.swift file,
+
 1. Create New File
 2. Choose Swift File
 3. Keep name as main.swift
