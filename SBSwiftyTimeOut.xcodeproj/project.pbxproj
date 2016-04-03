@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DDABED61CB149C7006DF534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDABED51CB149C7006DF534 /* AppDelegate.swift */; };
+		2DDABEDD1CB149C7006DF534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDABEDC1CB149C7006DF534 /* Assets.xcassets */; };
+		2DDABEE01CB149C7006DF534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDABEDE1CB149C7006DF534 /* LaunchScreen.storyboard */; };
+		2DDABEED1CB14C07006DF534 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDABEEC1CB14C07006DF534 /* main.swift */; };
+		2DDABEEF1CB14C82006DF534 /* SBTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDABEEE1CB14C82006DF534 /* SBTimeOut.swift */; };
+		2DDABEF11CB14DB1006DF534 /* SBLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDABEF01CB14DB1006DF534 /* SBLogInViewController.swift */; };
+		2DDABEF31CB14DE4006DF534 /* SBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDABEF21CB14DE4006DF534 /* SBHomeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2DDABED21CB149C7006DF534 /* SBSwiftyTimeOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBSwiftyTimeOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DDABED51CB149C7006DF534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DDABEDC1CB149C7006DF534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DDABEDF1CB149C7006DF534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DDABEE11CB149C7006DF534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDABEEC1CB14C07006DF534 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2DDABEEE1CB14C82006DF534 /* SBTimeOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTimeOut.swift; sourceTree = "<group>"; };
+		2DDABEF01CB14DB1006DF534 /* SBLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBLogInViewController.swift; sourceTree = "<group>"; };
+		2DDABEF21CB14DE4006DF534 /* SBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBHomeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DDABECF1CB149C7006DF534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DDABEC91CB149C7006DF534 = {
+			isa = PBXGroup;
+			children = (
+				2DDABED41CB149C7006DF534 /* SBSwiftyTimeOut */,
+				2DDABED31CB149C7006DF534 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DDABED31CB149C7006DF534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DDABED21CB149C7006DF534 /* SBSwiftyTimeOut.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DDABED41CB149C7006DF534 /* SBSwiftyTimeOut */ = {
+			isa = PBXGroup;
+			children = (
+				2DDABEE71CB149DE006DF534 /* App Delegate */,
+				2DDABEE81CB149EA006DF534 /* Controller */,
+				2DDABEE91CB149F4006DF534 /* SBTimeOut */,
+				2DDABEDC1CB149C7006DF534 /* Assets.xcassets */,
+				2DDABEDE1CB149C7006DF534 /* LaunchScreen.storyboard */,
+				2DDABEE11CB149C7006DF534 /* Info.plist */,
+				2DDABEEC1CB14C07006DF534 /* main.swift */,
+			);
+			path = SBSwiftyTimeOut;
+			sourceTree = "<group>";
+		};
+		2DDABEE71CB149DE006DF534 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2DDABED51CB149C7006DF534 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		2DDABEE81CB149EA006DF534 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DDABEF01CB14DB1006DF534 /* SBLogInViewController.swift */,
+				2DDABEF21CB14DE4006DF534 /* SBHomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2DDABEE91CB149F4006DF534 /* SBTimeOut */ = {
+			isa = PBXGroup;
+			children = (
+				2DDABEEE1CB14C82006DF534 /* SBTimeOut.swift */,
+			);
+			name = SBTimeOut;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DDABED11CB149C7006DF534 /* SBSwiftyTimeOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DDABEE41CB149C7006DF534 /* Build configuration list for PBXNativeTarget "SBSwiftyTimeOut" */;
+			buildPhases = (
+				2DDABECE1CB149C7006DF534 /* Sources */,
+				2DDABECF1CB149C7006DF534 /* Frameworks */,
+				2DDABED01CB149C7006DF534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBSwiftyTimeOut;
+			productName = SBSwiftyTimeOut;
+			productReference = 2DDABED21CB149C7006DF534 /* SBSwiftyTimeOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DDABECA1CB149C7006DF534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = PRODAPT;
+				TargetAttributes = {
+					2DDABED11CB149C7006DF534 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 2DDABECD1CB149C7006DF534 /* Build configuration list for PBXProject "SBSwiftyTimeOut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DDABEC91CB149C7006DF534;
+			productRefGroup = 2DDABED31CB149C7006DF534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DDABED11CB149C7006DF534 /* SBSwiftyTimeOut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DDABED01CB149C7006DF534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DDABEE01CB149C7006DF534 /* LaunchScreen.storyboard in Resources */,
+				2DDABEDD1CB149C7006DF534 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DDABECE1CB149C7006DF534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DDABEF31CB14DE4006DF534 /* SBHomeViewController.swift in Sources */,
+				2DDABEED1CB14C07006DF534 /* main.swift in Sources */,
+				2DDABEEF1CB14C82006DF534 /* SBTimeOut.swift in Sources */,
+				2DDABED61CB149C7006DF534 /* AppDelegate.swift in Sources */,
+				2DDABEF11CB14DB1006DF534 /* SBLogInViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2DDABEDE1CB149C7006DF534 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DDABEDF1CB149C7006DF534 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DDABEE21CB149C7006DF534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DDABEE31CB149C7006DF534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DDABEE51CB149C7006DF534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SBSwiftyTimeOut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prodapt.SBSwiftyTimeOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2DDABEE61CB149C7006DF534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SBSwiftyTimeOut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prodapt.SBSwiftyTimeOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DDABECD1CB149C7006DF534 /* Build configuration list for PBXProject "SBSwiftyTimeOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDABEE21CB149C7006DF534 /* Debug */,
+				2DDABEE31CB149C7006DF534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DDABEE41CB149C7006DF534 /* Build configuration list for PBXNativeTarget "SBSwiftyTimeOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DDABEE51CB149C7006DF534 /* Debug */,
+				2DDABEE61CB149C7006DF534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DDABECA1CB149C7006DF534 /* Project object */;
+}
