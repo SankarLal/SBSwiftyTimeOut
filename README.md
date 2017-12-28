@@ -22,7 +22,16 @@ Add `SBTimeOut` Class into `main.m` Class
 import Foundation
 import UIKit
 
-UIApplicationMain(Process.argc, Process.unsafeArgv, NSStringFromClass(SBTimeOut), NSStringFromClass(AppDelegate))
+UIApplicationMain(
+    CommandLine.argc,
+    UnsafeMutableRawPointer(CommandLine.unsafeArgv)
+        .bindMemory(
+            to: UnsafeMutablePointer<Int8>.self,
+            capacity: Int(CommandLine.argc)),
+    NSStringFromClass(SBTimeOut.self),
+    NSStringFromClass(AppDelegate.self)
+)
+
 
 ```
 
@@ -38,7 +47,7 @@ For Background And Suspended State - AppDelegate
 
 ```objective-c
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
         // Get Stored Time Stamp
@@ -49,22 +58,21 @@ For Background And Suspended State - AppDelegate
     //MARK:  Application Timeout Method
     func getIdleTimeInMinutes () {
         
-        let getStoredDate : NSDate? = NSUserDefaults.standardUserDefaults().objectForKey("SB_Date_Key") as? NSDate
+        let getStoredDate : NSDate? = UserDefaults.standard.object(forKey: "SB_Date_Key") as? NSDate
         
         if ((getStoredDate) != nil) {
             
-            let timeOutMinutes : NSTimeInterval = kSBApplicationTimeoutInMinutes * 60
-            let diff : NSTimeInterval = NSDate ().timeIntervalSinceDate(getStoredDate!)
+            let timeOutMinutes : TimeInterval = kSBApplicationTimeoutInMinutes * 60
+            let diff : TimeInterval = NSDate ().timeIntervalSince(getStoredDate! as Date)
             
             
             if (diff >= timeOutMinutes){
                 
-                NSNotificationCenter.defaultCenter().postNotificationName(kSBApplicationDidTimeoutNotification,
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: kSBApplicationDidTimeoutNotification),
                                                                           object: nil)
             }
             
         }
-
     }
 
 
@@ -74,10 +82,11 @@ Add Time Out Notification Observer in `didFinishLaunchingWithOptions` - AppDeleg
 ```objective-c
 
         // Observer the touch event
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: "applicationDidTimeout:",
-                                                         name: kSBApplicationDidTimeoutNotification,
+               NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.applicationDidTimeout(notification:)),
+                                                         name: NSNotification.Name(rawValue: kSBApplicationDidTimeoutNotification),
                                                          object: nil)
+
 
 ```
 
@@ -85,9 +94,9 @@ LogOut Functionality - AppDelegate
 
 ```objective-c
 
-    func applicationDidTimeout (notification : NSNotification) {
+    @objc func applicationDidTimeout (notification : NSNotification) {
         
-        if (NSUserDefaults.standardUserDefaults().valueForKey("SBLoggedIn") != nil) {
+        if (UserDefaults.standard.value(forKey: "SBLoggedIn") != nil) {
             
             alertView = UIAlertView ()
             alertView?.title = "LoggedOut!"
@@ -95,25 +104,20 @@ LogOut Functionality - AppDelegate
             alertView?.delegate = nil
             alertView?.show()
             
-            self.performSelector("performRootViewController"
-                , withObject: nil,
+            self.perform(#selector(self.performRootViewController)
+                , with: nil,
                   afterDelay: 5.0)
             
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("SBLoggedIn")
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("SB_Date_Key")
+            UserDefaults.standard.removeObject(forKey: "SBLoggedIn")
+            UserDefaults.standard.removeObject(forKey: "SB_Date_Key")
 
         }
-
     }
     
-    func performRootViewController () {
-        
-        alertView?.dismissWithClickedButtonIndex(0, animated: true)
+    @objc func performRootViewController () {
+        alertView?.dismiss(withClickedButtonIndex: 0, animated: true)
         loadLogInRootController()
-        
     }
-
-
 ```
 
 [sbtimeout-url]: https://github.com/SankarLal/SBTimeOut/
