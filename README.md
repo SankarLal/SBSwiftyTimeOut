@@ -1,5 +1,5 @@
 # SBSwiftyTimeOut
-SBSwiftyTimeOut detects when an app goes idle/inactive (no touches) and sends a time out notification when app is in Foreground State, Suspended State and Background State which is developed in Swift.
+SBSwiftyTimeOut detects when an app goes idle/inactive (no touches) and sends a time out notification when app is in Foreground State, Suspended State and Background State which is developed in Swift 4.
 
 For Objective C click [here][sbtimeout-url]
 
