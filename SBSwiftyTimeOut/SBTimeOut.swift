@@ -19,20 +19,20 @@ let kSBApplicationDidTimeoutNotification = "SBApplicationDidTimeout"
 
 class SBTimeOut: UIApplication {
 
-    var _idleTimer : NSTimer?
+    var _idleTimer : Timer?
     
     
-    override func sendEvent(event: UIEvent)
+    override func sendEvent(_ event: UIEvent)
     {
         
         super.sendEvent(event)
         
         // Check to see if there was a touch event
-        let allTouches = event.allTouches()
+        let allTouches = event.allTouches
         
-        for touch in allTouches!.enumerate() {
+        for touch in allTouches!.enumerated() {
             
-            if touch.element.phase != .Began  {
+            if touch.element.phase != .began  {
                 resetIdleTimer()
                 break
             }
@@ -57,23 +57,23 @@ class SBTimeOut: UIApplication {
         // Schedule a timer to fire in kSBApplicationTimeoutInMinutes * 60
         let timeout = kSBApplicationTimeoutInMinutes * 60
         
-        _idleTimer = NSTimer.scheduledTimerWithTimeInterval(timeout,
+        _idleTimer = Timer.scheduledTimer(timeInterval: timeout,
                                                             target: self,
-                                                            selector: "idleTimerExceeded",
+                                                            selector: #selector(self.idleTimerExceeded),
                                                             userInfo: nil,
                                                             repeats: false)
         
         // Set Current Time
-        NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: "SB_Date_Key")
+        UserDefaults.standard.set(NSDate(), forKey: "SB_Date_Key")
         
     }
     
-    func idleTimerExceeded () {
+   @objc func idleTimerExceeded () {
         
         /* Post a notification so anyone who subscribes to it can be notified when
          * the application times out */
         
-        NSNotificationCenter.defaultCenter().postNotificationName(kSBApplicationDidTimeoutNotification,
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kSBApplicationDidTimeoutNotification),
                                                                   object: nil)
         
 
